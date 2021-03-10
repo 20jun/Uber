@@ -8,7 +8,8 @@ const HomeScreen = () => {
     return (
         <View>
             <HomeMap />
-
+            
+            {/* CovidMessage */}
             <CovidMessage />
 
             
