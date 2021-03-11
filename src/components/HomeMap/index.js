@@ -8,7 +8,7 @@ const HomeMap = () => {
             height : 300,
             backgroundColor : '#a0abff',
             justifyContent : 'center',
-            alignItems : 'center', 
+            alignItems : 'center',  
         }}>
             <MapView
             style = {{
