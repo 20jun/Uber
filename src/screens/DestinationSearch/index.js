@@ -28,6 +28,8 @@ const DestinationSearch = () => {
           }}
           enablePoweredByContainer = {false} // 자동완성 기능 아래에 powerdByGoogle 제거
           suppressDefaultStyles //라이브러리에서 모든 기본 스타일을 제거
+          currentLocation = {true}
+          currentLocationLabel = 'Current location'
           styles={{
             textInput: styles.textInput,
             container: styles.autocompleteContainer,
