@@ -25,6 +25,7 @@ const HomeMap = () => {
                 height: '100%',
             }}
             provider={PROVIDER_GOOGLE}
+            showsUserLocation = {true}
             initialRegion={{
                 latitude: 28.450627,
                 longitude: -16.263045,

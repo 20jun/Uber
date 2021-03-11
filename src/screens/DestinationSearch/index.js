@@ -9,6 +9,15 @@ const DestinationSearch = () => {
   const [originPlace, setOriginPlace] = useState(null);
   const [destinationPlace, setDestinationPlace] = useState(null);
 
+  const homePlace = {
+    description : 'Home',
+    geometry : {location : {lat : 48.8152937, lng: 2.4597668}},
+  };
+  const workPlace = {
+    description: 'Work',
+    geometry: { location: { lat: 48.8496818, lng: 2.2940881 } },
+  };
+  
   useEffect(() => {
     console.warn('useEffect is called');
     if (originPlace && destinationPlace) {
@@ -42,6 +51,8 @@ const DestinationSearch = () => {
             language: 'en',
           }}
           renderRow = {(data : GooglePlaceData) => <PlaceRow data = {data} />}
+          renderDescription = {(data : DescriptionRow) => data.description || data.vicinity}
+          predefinedPlaces={[homePlace, workPlace]}
         />
 
         {/* {자동완성 기능 목적지} */}
