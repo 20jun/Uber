@@ -3,7 +3,12 @@ import {View, Text, SafeAreaView, Dimensions} from 'react-native';
 import RouteMap from '../../components/RouteMap';
 import UberTypes from '../../components/UberTypes';
 
+import {useRoute} from '@react-navigation/native';
+
 const SearchResults = () => {
+    const route = useRoute();
+
+    console.log(route.params);
     return (
     <SafeAreaView>
         <View style = {{display : 'flex', justifyContent : 'space-between'}}>

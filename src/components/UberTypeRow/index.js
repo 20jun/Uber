@@ -6,8 +6,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const UberTypeRow = (props) => {
     const {type} = props;
-    console.log(props);
-
+    
     const getImage = () => {
         if(type.type === 'UberX')
         {

@@ -1,12 +1,16 @@
 import React, {useEffect} from 'react';
 import { StatusBar, Platform} from 'react-native';
 
-import SearchResults from './src/screens/SearchResults';
-import DestinationSearch from './src/screens/DestinationSearch';
-import HomeScreen from './src/screens/HomeScreen';
+import Router from './src/navigation/Root';
 
 import Geolocation from '@react-native-community/geolocation';
+// 네비게이션
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+
+
 navigator.geolocation = require('@react-native-community/geolocation');
+
 
 const App: () => React$Node = () => {
 
@@ -28,9 +32,7 @@ const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      {/* <HomeScreen /> */}
-      {/* <SearchResults /> */}
-      <HomeScreen />
+      <Router />
     </>
   );
 };
