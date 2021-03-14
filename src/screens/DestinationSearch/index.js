@@ -16,9 +16,10 @@ const DestinationSearch = () => {
 
   const checkNavigation = () => {
     if (originPlace && destinationPlace) {
-      navigation.navigate('SearchResults', {
+      navigation.navigate('SearchResults' , {
         originPlace,
         destinationPlace,
+
       })
     }
   }
@@ -45,7 +46,7 @@ const DestinationSearch = () => {
         <GooglePlacesAutocomplete
           placeholder='어디서 출발하시나요?'
           onPress={(data, details = null) => {
-            setOriginPlace({ data, details });
+            setOriginPlace({ data, details }, checkNavigation);
             // console.log(data, details);
           }}
           enablePoweredByContainer = {false} // 자동완성 기능 아래에 powerdByGoogle 제거

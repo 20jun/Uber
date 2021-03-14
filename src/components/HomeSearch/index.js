@@ -12,7 +12,7 @@ const HomeSearch = () => {
     const goToSearch = () => {
         navigation.navigate('DestinationSearch')
     }
-    return (
+    return ( 
         <View>
             {/* Input Box */}
             <Pressable onPress = {goToSearch} style = {styles.inputBox}>
@@ -23,7 +23,7 @@ const HomeSearch = () => {
                     <MaterialIcons name = {'keyboard-arrow-down'} size = {16} />
                 </View>
             </Pressable>
-            {/* Previous destination */}
+            {/* Previous destination */} 
             <View style = {styles.row}>
                 <View style = {styles.iconContainer}>
                     <AntDesign name = {'clockcircle'} size = {20} color = {'#ffffff'} />
